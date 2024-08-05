@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokoh favorite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="tokoh.css">
+    <style>
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <span class="bars" id="bars"><i class="fa fa-bars"></i></span>
+                <div class="links" id="navigation">
+                    <a href="" class="link">Home</a>
+                    <a href="#" class="link">Film</a>
+                    <a href="#" class="link">Tokoh</a>
+                </div>
+    
+                <div class="options" id="options">
+                    <span class="close" id="close"><i class="fa fa-close"></i></span>
+                </div>
+            </div>
+        </nav>
+    
+        <section class="section home" id="home">
+    
+            <div class="container">
+                <div class="items">
+                    <div class="item">
+                        <h1 class="title">Cristiano Ronaldo</h1>
+                        <div class="desc">
+                            <p>
+                                Cristiano Ronaldo adalah idola saya karena sangat menginspirasi.</br>
+                                Cristiano Ronaldo dikenal sebagai salah satu pesepak bola terbaik di dunia,dan salah satu kunci kesuksesannya adalah kerja keras yang luar biasa.
+                            </p>
+                        </div>
+                        <div class="btns">
+                            <a href="https://id.wikipedia.org/wiki/Daftar_pencapaian_karier_yang_diraih_oleh_Cristiano_Ronaldo" class="btn btn-cart" target="_blank">View achievement</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">
+                            <img src="dodo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <footer class="footer">
+        <div class="copyright">&copy; 2024 Hak Cipta Anda</div>
+    </footer>
+    
+    <script src="https://www.unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+
+    <script>
+
+        const bars = document.getElementById('bars')
+        const close = document.getElementById('close')
+        const navigation = document.getElementById('navigation')
+        const options = document.getElementById('options')
+
+        bars.addEventListener('click', function () {
+            navigation.classList.add('active')
+            options.classList.add('active')
+
+        });
+        close.addEventListener('click', function () {
+            navigation.classList.remove('active')
+            options.classList.remove('active')
+
+        })
+        const rv = scrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 1000,
+            delay: 1000
+        })
+        sr.reveal('.title', { delay: 1200 });
+    </script>
+
+</body>
+
+</html>
